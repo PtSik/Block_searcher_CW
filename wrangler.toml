@@ -1,0 +1,28 @@
+name = "block_searcher_cw"
+main = "src/index.ts"
+compatibility_date = "2024-11-07"
+
+# compatibility_flags = [ "nodejs_compat" ]
+
+# [vars]
+# MY_VAR = "my-variable"
+
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+account_id = "08cb3f6365e5921372431dfad92bd8ae"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "my-database"
+# database_id = ""
+
+# [ai]
+# binding = "AI"
+
+# [observability]
+# enabled = true
+# head_sampling_rate = 1
