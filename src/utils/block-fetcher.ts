@@ -1,8 +1,9 @@
 // src/utils/block-fetcher.ts
 
-const EVM_RPC_URL = "https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID";
+const EVM_RPC_URL =
+  "https://mainnet.infura.io/v3/d329f1cc50934c01ae4f89c0662b71b4";
 const SOLANA_RPC_URL =
-  "https://solana-mainnet.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY";
+  "https://solana-mainnet.g.alchemy.com/v2/bAe1SR58rtVmDbeol7FUMnPCZbvqi5WZ";
 
 const MAX_SEARCH_OFFSET = 100;
 const TIME_DIFFERENCE_THRESHOLD = 60; // seconds
@@ -97,7 +98,9 @@ export async function getLatestBlockNumber(): Promise<number> {
 }
 
 // Function to get EVM block by timestamp (binary search)
-export async function getEVMBlockByTimestamp(timestamp: number): Promise<number> {
+export async function getEVMBlockByTimestamp(
+  timestamp: number
+): Promise<number> {
   const latestBlock = await getLatestBlockNumber();
   let startBlock = 0;
   let endBlock = latestBlock;
