@@ -12,12 +12,12 @@ const slotTimeCache: Record<number, number> = {};
 const blockTimestampCache: Record<number, number> = {};
 
 // Helper function to delay execution
-async function delay(ms: number): Promise<void> {
+export async function delay(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 // Retry function for transient errors
-async function retry<T>(
+export async function retry<T>(
   fn: () => Promise<T>,
   retries = 3,
   delayMs = 1000
@@ -148,7 +148,7 @@ export async function getLatestSlot(): Promise<number> {
 }
 
 // Function to get slot time from Solana with caching
-async function getCachedSlotTime(slot: number): Promise<number> {
+export async function getCachedSlotTime(slot: number): Promise<number> {
   return getCachedData(slotTimeCache, slot, async () => {
     return await getSlotTime(slot);
   });

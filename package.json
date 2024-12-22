@@ -2,13 +2,17 @@
   "name": "Block_searcher_CW",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy --minify"
+    "deploy": "wrangler deploy --minify",
+    "test": "vitest"
   },
   "dependencies": {
     "hono": "^4.6.9"
   },
   "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.5.40",
     "@cloudflare/workers-types": "^4.20241022.0",
+    "@types/node": "^22.10.2",
+    "vitest": "2.1.8",
     "wrangler": "^3.83.0"
   }
 }
